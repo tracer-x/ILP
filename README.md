@@ -1,4 +1,4 @@
-# A sample LLVM emulator
+# A sample LLVM analyser
 
 This project requires LLVM & Z3. Supposed that our working folder named `ROOT`.
 
