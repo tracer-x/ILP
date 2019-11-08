@@ -4,13 +4,13 @@
 #include <sstream>
 #include <string>
 
+#include <llvm/IR/Instructions.h>
 #include <llvm/IR/LLVMContext.h>
 #include <llvm/IR/Module.h>
 #include <llvm/IRReader/IRReader.h>
 #include <llvm/Support/SourceMgr.h>
 #include <llvm/Support/TargetSelect.h>
 #include <llvm/Support/raw_ostream.h>
-
 
 using namespace std;
 using namespace llvm;
@@ -26,37 +26,87 @@ int main(int argc, char **argv) {
     InputFile = "../test/test.bc";
   }
   unique_ptr<Module> mainModule = parseIRFile("../test/test.bc", Err, Context);
-  //errs() << "Function & BB:\n";
+
+  map<BasicBlock *, int> m;
+  int i = 0;
   for (Function &f : mainModule->getFunctionList()) {
-    stringstream ss;
-    ss << "max:";
-    int i = 0;
-    for (BasicBlock &bb : f) {
-      ss  << "*" << f.getName().str() << "_" << "BB" << ++i;
-      if (&f.back() != &bb) {
-        ss << "+";
+    if (!f.getBasicBlockList().empty()) {
+      int i = 0;
+      for (BasicBlock &bb : f) {
+        m[&bb] = ++i;
       }
     }
-    errs() << ss.str() << "+";
   }
-  errs() << ";\n";
-  
-  //....
-  
-  errs() << "\n\n";
+
+  vector<BasicBlock *> bbs;
   for (Function &f : mainModule->getFunctionList()) {
-    stringstream ss;
-    ss << "int ";
-    int i = 0;
-    for (BasicBlock &bb : f) {
-      ss << f.getName().str() << "_" << "BB" << ++i;
-      if (&f.back() != &bb) {
-        ss << ",";
+    if (!f.getBasicBlockList().empty()) {
+      int i = 0;
+      for (BasicBlock &bb : f) {
+        bbs.push_back(&bb);
       }
     }
-    errs() << ss.str() << ",";
   }
-  errs() << ";\n";
+
+  errs() << "Size=" << bbs.size() << "\n";
+
+  //
+  stringstream ss;
+  ss << "int ";
+  i = 0;
+  while (i < bbs.size()) {
+    ss << bbs[i]->getParent()->getName().str() << "_BB";
+    ss << ++i;
+    if (i == bbs.size()) {
+      ss << ";\n";
+    } else {
+      ss << ", ";
+    }
+  }
+  errs() << ss.str();
+
+  //
+  ss.str("");
+  ss << "max: ";
+  i = 0;
+  while (i < bbs.size()) {
+    if (bbs[i]->size() > 1) {
+      ss << bbs[i]->size() << "*";
+    }
+    ss << bbs[i]->getParent()->getName().str() << "_BB";
+    ss << ++i;
+    if (i == bbs.size()) {
+      ss << ";\n";
+    } else {
+      ss << " + ";
+    }
+  }
+  errs() << ss.str();
+
+  //
+  ss.str("");
+  i = 0;
+  while (i < bbs.size()) {
+    Instruction *t = bbs[i]->getTerminator();
+
+    if (t->getOpcode() == Instruction::Br) {
+      auto br = cast<BranchInst>(t);
+
+      if (br->isConditional()) {
+        //        br->print(errs(), true);
+        //        errs() << "\n";
+        //        errs() << m[br->getSuccessor(0)] << "\n";
+        //        errs() << m[br->getSuccessor(1)] << "\n";
+        ss << bbs[i]->getParent()->getName().str() << "_BB" << i << " = ";
+        BasicBlock *b0 = br->getSuccessor(0);
+        ss << b0->getParent()->getName().str() << "_BB" << m[b0] << " + ";
+        BasicBlock *b1 = br->getSuccessor(1);
+        ss << b1->getParent()->getName().str() << "_BB" << m[b1] << "\n";
+      }
+    }
+    ++i;
+  }
+  errs() << ss.str();
 
   return 0;
 }
