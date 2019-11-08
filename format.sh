@@ -16,5 +16,7 @@ echo "====================="
 
 echo "=== CLANG FORMAT ==="
 $CLANG_FORMAT -i $SRC/tool/*.cpp
+$CLANG_FORMAT -i $SRC/graph/*.cpp
+$CLANG_FORMAT -i $SRC/graph/*.h
 $CLANG_FORMAT -i $TEST/*.c
 echo "====================="

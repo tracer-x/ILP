@@ -50,7 +50,6 @@ int main(int argc, char **argv) {
 
   errs() << "Size=" << bbs.size() << "\n";
 
-
   //
   stringstream ss;
   ss.str("\n");
@@ -84,13 +83,13 @@ int main(int argc, char **argv) {
         //        errs() << "\n";
         //        errs() << m[br->getSuccessor(0)] << "\n";
         //        errs() << m[br->getSuccessor(1)] << "\n";
-        ss << bbs[i]->getParent()->getName().str() << "_BB" << (i+1) << " = ";
+        ss << bbs[i]->getParent()->getName().str() << "_BB" << (i + 1) << " = ";
         BasicBlock *b0 = br->getSuccessor(0);
         ss << b0->getParent()->getName().str() << "_BB" << m[b0] << " + ";
         BasicBlock *b1 = br->getSuccessor(1);
         ss << b1->getParent()->getName().str() << "_BB" << m[b1] << ";\n";
-      }else{
-        ss << bbs[i]->getParent()->getName().str() << "_BB" << (i+1) << " = ";
+      } else {
+        ss << bbs[i]->getParent()->getName().str() << "_BB" << (i + 1) << " = ";
         BasicBlock *b1 = br->getSuccessor(0);
         ss << b1->getParent()->getName().str() << "_BB" << m[b1] << ";\n";
       }
@@ -98,7 +97,7 @@ int main(int argc, char **argv) {
     ++i;
   }
   errs() << ss.str();
-  
+
   //
   ss.str("\n");
   ss << "int ";
