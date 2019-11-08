@@ -50,23 +50,10 @@ int main(int argc, char **argv) {
 
   errs() << "Size=" << bbs.size() << "\n";
 
-  //
-  stringstream ss;
-  ss << "int ";
-  i = 0;
-  while (i < bbs.size()) {
-    ss << bbs[i]->getParent()->getName().str() << "_BB";
-    ss << ++i;
-    if (i == bbs.size()) {
-      ss << ";\n";
-    } else {
-      ss << ", ";
-    }
-  }
-  errs() << ss.str();
 
   //
-  ss.str("");
+  stringstream ss;
+  ss.str("\n");
   ss << "max: ";
   i = 0;
   while (i < bbs.size()) {
@@ -84,7 +71,7 @@ int main(int argc, char **argv) {
   errs() << ss.str();
 
   //
-  ss.str("");
+  ss.str("\n");
   i = 0;
   while (i < bbs.size()) {
     Instruction *t = bbs[i]->getTerminator();
@@ -97,14 +84,33 @@ int main(int argc, char **argv) {
         //        errs() << "\n";
         //        errs() << m[br->getSuccessor(0)] << "\n";
         //        errs() << m[br->getSuccessor(1)] << "\n";
-        ss << bbs[i]->getParent()->getName().str() << "_BB" << i << " = ";
+        ss << bbs[i]->getParent()->getName().str() << "_BB" << (i+1) << " = ";
         BasicBlock *b0 = br->getSuccessor(0);
         ss << b0->getParent()->getName().str() << "_BB" << m[b0] << " + ";
         BasicBlock *b1 = br->getSuccessor(1);
-        ss << b1->getParent()->getName().str() << "_BB" << m[b1] << "\n";
+        ss << b1->getParent()->getName().str() << "_BB" << m[b1] << ";\n";
+      }else{
+        ss << bbs[i]->getParent()->getName().str() << "_BB" << (i+1) << " = ";
+        BasicBlock *b1 = br->getSuccessor(0);
+        ss << b1->getParent()->getName().str() << "_BB" << m[b1] << ";\n";
       }
     }
     ++i;
+  }
+  errs() << ss.str();
+  
+  //
+  ss.str("\n");
+  ss << "int ";
+  i = 0;
+  while (i < bbs.size()) {
+    ss << bbs[i]->getParent()->getName().str() << "_BB";
+    ss << ++i;
+    if (i == bbs.size()) {
+      ss << ";\n";
+    } else {
+      ss << ", ";
+    }
   }
   errs() << ss.str();
 
