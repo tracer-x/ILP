@@ -18,9 +18,10 @@ using namespace llvm;
 class Node {
 public:
   Node();
+  Node(int _id, BasicBlock *_bb);
   virtual ~Node();
   int id;
-  BasicBlock *b;
+  BasicBlock *bb;
   vector<shared_ptr<Node>> children;
 };
 
