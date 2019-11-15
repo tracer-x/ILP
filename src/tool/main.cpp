@@ -27,7 +27,7 @@ int main(int argc, char **argv) {
   if (InputFile == "") {
     InputFile = "../test/test.bc";
   }
-  unique_ptr<Module> mainModule = parseIRFile("../test/test.bc", Err, Context);
+  unique_ptr<Module> mainModule = parseIRFile(InputFile, Err, Context);
 
   for (Function &f : mainModule->getFunctionList()) {
     if (!f.getBasicBlockList().empty()) {
