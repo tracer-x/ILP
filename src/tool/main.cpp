@@ -4,6 +4,8 @@
 #include <sstream>
 #include <string>
 
+#include <llvm/Analysis/LoopInfo.h>
+#include <llvm/IR/Dominators.h>
 #include <llvm/IR/Instructions.h>
 #include <llvm/IR/LLVMContext.h>
 #include <llvm/IR/Module.h>
@@ -40,8 +42,29 @@ int main(int argc, char **argv) {
   }
 
   // print
-  // max
+  // declare
   stringstream ss;
+  ss << "int ";
+  for (unsigned i = 0; i < graphs.size(); ++i) {
+    shared_ptr<Graph> g = graphs[i];
+    string pre = g->func->getName().str() + "_BB";
+    for (unsigned j = 0; j < g->nodes.size(); ++j) {
+      ss << pre << g->nodes[j]->id;
+      if (j < g->nodes.size() - 1) {
+        ss << ", ";
+      }
+    }
+    if (i == graphs.size() - 1) {
+      ss << ";\n";
+    } else {
+      ss << ", ";
+    }
+  }
+  errs() << ss.str();
+  errs() << "-----------\n";
+
+  // max
+  ss.str("");
   ss << "max: ";
   for (unsigned i = 0; i < graphs.size(); ++i) {
     ss << graphs[i]->genSum();
@@ -65,6 +88,29 @@ int main(int argc, char **argv) {
     errs() << graphs[i]->genFuncCall();
   }
   errs() << "-----------\n";
+
+  // loop head
+  ss.str("");
+  for (unsigned i = 0; i < graphs.size(); ++i) {
+    shared_ptr<Graph> g = graphs[i];
+    string pre = g->func->getName().str() + "_BB";
+
+    DominatorTree dt = DominatorTree();
+    dt.recalculate(*g->func);
+    LoopInfoBase<BasicBlock, Loop> *loopInfo =
+        new LoopInfoBase<BasicBlock, Loop>();
+    loopInfo->releaseMemory();
+    loopInfo->analyze(dt);
+
+    for (unsigned j = 0; j < g->nodes.size(); ++j) {
+      if (loopInfo->isLoopHeader(g->nodes[j]->bb)) {
+        //        g->nodes[j]->bb->print(errs());
+        //        errs() << "\n";
+        ss << pre << g->nodes[j]->id << " <= 3;\n";
+      }
+    }
+  }
+  errs() << ss.str();
 
   return 0;
 }

@@ -17,7 +17,7 @@ class Graph {
 public:
   Graph();
   virtual ~Graph();
-  string functionName;
+  Function *func;
   vector<shared_ptr<Node>> nodes;
   void init(Function *f);
   string genSum();
