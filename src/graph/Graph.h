@@ -9,7 +9,6 @@
 #define SRC_GRAPH_GRAPH_H_
 
 #include "Node.h"
-#include <sstream>
 
 using namespace std;
 using namespace llvm;
@@ -20,8 +19,10 @@ public:
   virtual ~Graph();
   string functionName;
   vector<shared_ptr<Node>> nodes;
-  void init(Function* f);
+  void init(Function *f);
+  string genSum();
   string genConsts();
+  string genFuncCall();
   void print();
 };
 

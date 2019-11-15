@@ -10,6 +10,7 @@
 
 #include <llvm/IR/Instructions.h>
 #include <memory>
+#include <sstream>
 #include <vector>
 
 using namespace std;
@@ -23,6 +24,7 @@ public:
   int id;
   BasicBlock *bb;
   vector<shared_ptr<Node>> children;
+  string genFuncCallConsts();
 };
 
 #endif /* SRC_TOOL_NODE_H_ */

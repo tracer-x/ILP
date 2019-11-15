@@ -11,14 +11,13 @@ Graph::Graph() {}
 
 Graph::~Graph() {}
 
-void Graph::init(Function* f) {
-  errs() << "Generating graph of function \"" << f->getName().str() << "\"\n";
+void Graph::init(Function *f) {
   functionName = f->getName().str();
   int order = 0;
 
   // nodes
-  map<BasicBlock*, int> bb2id;
-  for (BasicBlock& bb : *f) {
+  map<BasicBlock *, int> bb2id;
+  for (BasicBlock &bb : *f) {
     nodes.push_back(std::make_shared<Node>(order, &bb));
     bb2id[&bb] = order;
     ++order;
@@ -30,8 +29,9 @@ void Graph::init(Function* f) {
   //    nodes[i]->bb->print(errs(), true);
   //  }
 
+  // edges
   for (unsigned i = 0; i < nodes.size(); ++i) {
-    Instruction* t = nodes[i]->bb->getTerminator();
+    Instruction *t = nodes[i]->bb->getTerminator();
     if (t->getOpcode() == Instruction::Br) {
       auto br = cast<BranchInst>(t);
       if (br->isConditional()) {
@@ -39,32 +39,29 @@ void Graph::init(Function* f) {
         nodes[i]->children.push_back(std::move(child0));
         shared_ptr<Node> child1 = nodes[bb2id[br->getSuccessor(1)]];
         nodes[i]->children.push_back(std::move(child1));
-
       } else {
         shared_ptr<Node> child0 = nodes[bb2id[br->getSuccessor(0)]];
         nodes[i]->children.push_back(std::move(child0));
       }
     }
   }
+}
 
-  errs() << "Finished generating graph of function \"" << f->getName().str()
-         << "\"\n";
+string Graph::genSum() {
+  string prefix = functionName + "_BB";
+  stringstream ss;
+  for (unsigned i = 0; i < nodes.size(); ++i) {
+    ss << nodes[i]->bb->size() << "*" << prefix << nodes[i]->id;
+    if (i < nodes.size() - 1) {
+      ss << " + ";
+    }
+  }
+  return ss.str();
 }
 
 string Graph::genConsts() {
   string prefix = functionName + "_BB";
   stringstream ss;
-
-  // max
-  ss << "max: ";
-  for (unsigned i = 0; i < nodes.size(); ++i) {
-    ss << nodes[i]->bb->size() << "*" << prefix << nodes[i]->id;
-    if (i == nodes.size() - 1) {
-      ss << ";\n";
-    } else {
-      ss << " + ";
-    }
-  }
 
   // check children
   for (unsigned i = 0; i < nodes.size(); ++i) {
@@ -102,6 +99,17 @@ string Graph::genConsts() {
     }
   }
 
+  return ss.str();
+}
+
+string Graph::genFuncCall() {
+  stringstream ss;
+  for (unsigned i = 0; i < nodes.size(); ++i) {
+    string tmp = nodes[i]->genFuncCallConsts();
+    if (!tmp.empty()) {
+      ss << tmp;
+    }
+  }
   return ss.str();
 }
 

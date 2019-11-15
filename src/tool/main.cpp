@@ -17,27 +17,54 @@
 using namespace std;
 using namespace llvm;
 
-cl::opt<string> InputFile(cl::Positional, cl::desc("<bc file>"), cl::init("-"));
+cl::opt<string> InputFile(cl::Positional, cl::desc("<bc file>"));
 
 int main(int argc, char **argv) {
   cl::ParseCommandLineOptions(argc, argv, "A simple LLVM symbolic simulator");
   // prepare module
   LLVMContext Context;
   SMDiagnostic Err;
-  if (InputFile == "") {
+  if (InputFile.empty()) {
     InputFile = "../test/test.bc";
   }
   unique_ptr<Module> mainModule = parseIRFile(InputFile, Err, Context);
 
+  // init graphs
+  vector<shared_ptr<Graph>> graphs;
   for (Function &f : mainModule->getFunctionList()) {
     if (!f.getBasicBlockList().empty()) {
-      unique_ptr<Graph> g = std::make_unique<Graph>();
+      shared_ptr<Graph> g = std::make_shared<Graph>();
       g->init(&f);
-      g->print();
-      errs() << "Constraints: \n";
-      errs() << g->genConsts() << "\n";
+      graphs.push_back(std::move(g));
     }
   }
+
+  // print
+  // max
+  stringstream ss;
+  ss << "max: ";
+  for (unsigned i = 0; i < graphs.size(); ++i) {
+    ss << graphs[i]->genSum();
+    if (i == graphs.size() - 1) {
+      ss << ";\n";
+    } else {
+      ss << " + ";
+    }
+  }
+  errs() << ss.str();
+  errs() << "-----------\n";
+
+  // constraints
+  for (unsigned i = 0; i < graphs.size(); ++i) {
+    errs() << graphs[i]->genConsts();
+  }
+  errs() << "-----------\n";
+
+  // function call
+  for (unsigned i = 0; i < graphs.size(); ++i) {
+    errs() << graphs[i]->genFuncCall();
+  }
+  errs() << "-----------\n";
 
   return 0;
 }
