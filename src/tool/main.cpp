@@ -42,28 +42,8 @@ int main(int argc, char **argv) {
   }
 
   // print
-  // declare
-  stringstream ss;
-  ss << "int ";
-  for (unsigned i = 0; i < graphs.size(); ++i) {
-    shared_ptr<Graph> g = graphs[i];
-    string pre = g->func->getName().str() + "_BB";
-    for (unsigned j = 0; j < g->nodes.size(); ++j) {
-      ss << pre << g->nodes[j]->id;
-      if (j < g->nodes.size() - 1) {
-        ss << ", ";
-      }
-    }
-    if (i == graphs.size() - 1) {
-      ss << ";\n";
-    } else {
-      ss << ", ";
-    }
-  }
-  errs() << ss.str();
-  errs() << "-----------\n";
-
   // max
+  stringstream ss;
   ss.str("");
   ss << "max: ";
   for (unsigned i = 0; i < graphs.size(); ++i) {
@@ -75,19 +55,17 @@ int main(int argc, char **argv) {
     }
   }
   errs() << ss.str();
-  errs() << "-----------\n";
 
   // constraints
+  errs() << "main_BB0 = 1;\n";
   for (unsigned i = 0; i < graphs.size(); ++i) {
     errs() << graphs[i]->genConsts();
   }
-  errs() << "-----------\n";
 
   // function call
   for (unsigned i = 0; i < graphs.size(); ++i) {
     errs() << graphs[i]->genFuncCall();
   }
-  errs() << "-----------\n";
 
   // loop head
   ss.str("");
@@ -108,6 +86,26 @@ int main(int argc, char **argv) {
         //        errs() << "\n";
         ss << pre << g->nodes[j]->id << " <= 3;\n";
       }
+    }
+  }
+  errs() << ss.str();
+
+  // declare
+  ss.str("");
+  ss << "int ";
+  for (unsigned i = 0; i < graphs.size(); ++i) {
+    shared_ptr<Graph> g = graphs[i];
+    string pre = g->func->getName().str() + "_BB";
+    for (unsigned j = 0; j < g->nodes.size(); ++j) {
+      ss << pre << g->nodes[j]->id;
+      if (j < g->nodes.size() - 1) {
+        ss << ", ";
+      }
+    }
+    if (i == graphs.size() - 1) {
+      ss << ";\n";
+    } else {
+      ss << ", ";
     }
   }
   errs() << ss.str();
