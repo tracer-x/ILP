@@ -1,28 +1,28 @@
 
-Value of objective function: 408.00000000
+Value of objective function: 42551.00000000
 
 Actual values of the variables:
 main_BB0                        1
 expint_BB0                      1
 expint_BB1                      1
-expint_BB2                      3
-expint_BB3                      3
-expint_BB4                      3
+expint_BB2                    100
+expint_BB3                    100
+expint_BB4                    100
 expint_BB5                      0
-expint_BB6                      2
+expint_BB6                     99
 expint_BB7                      0
 expint_BB8                      0
-expint_BB9                      3
-expint_BB10                     3
-expint_BB11                     3
+expint_BB9                    100
+expint_BB10                   100
+expint_BB11                   100
 expint_BB12                     0
-expint_BB13                     3
+expint_BB13                  1000
 expint_BB14                     0
-expint_BB15                     3
-expint_BB16                     3
-expint_BB17                     6
-expint_BB18                     3
+expint_BB15                  1000
+expint_BB16                  1000
+expint_BB17                  1100
+expint_BB18                   100
 expint_BB19                     0
 expint_BB20                     0
-expint_BB21                     3
-foo_BB0                         3
+expint_BB21                   100
+foo_BB0                      1000

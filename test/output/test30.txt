@@ -1,5 +1,5 @@
 
-Value of objective function: 112.00000000
+Value of objective function: 317.00000000
 
 Actual values of the variables:
 calculate_outputm1_BB0            0
@@ -94,7 +94,7 @@ calculate_outputm12_BB5            0
 calculate_outputm12_BB6            0
 calculate_outputm12_BB7            0
 calculate_outputm12_BB8            0
-calculate_output_BB0            2
+calculate_output_BB0            7
 calculate_output_BB1            0
 calculate_output_BB2            0
 calculate_output_BB3            0
@@ -114,7 +114,7 @@ calculate_output_BB16            0
 calculate_output_BB17            0
 calculate_output_BB18            0
 calculate_output_BB19            0
-calculate_output_BB20            2
+calculate_output_BB20            7
 calculate_output_BB21            0
 calculate_output_BB22            0
 calculate_output_BB23            0
@@ -126,7 +126,7 @@ calculate_output_BB28            0
 calculate_output_BB29            0
 calculate_output_BB30            0
 calculate_output_BB31            0
-calculate_output_BB32            2
+calculate_output_BB32            7
 calculate_output_BB33            0
 calculate_output_BB34            0
 calculate_output_BB35            0
@@ -142,7 +142,7 @@ calculate_output_BB44            0
 calculate_output_BB45            0
 calculate_output_BB46            0
 calculate_output_BB47            0
-calculate_output_BB48            2
+calculate_output_BB48            7
 calculate_output_BB49            0
 calculate_output_BB50            0
 calculate_output_BB51            0
@@ -158,12 +158,12 @@ calculate_output_BB60            0
 calculate_output_BB61            0
 calculate_output_BB62            0
 calculate_output_BB63            0
-calculate_output_BB64            2
+calculate_output_BB64            7
 calculate_output_BB65            0
-calculate_output_BB66            2
+calculate_output_BB66            7
 main_BB0                        1
-main_BB1                        3
-main_BB2                        2
+main_BB1                        8
+main_BB2                        7
 main_BB3                        0
 main_BB4                        0
 main_BB5                        0
@@ -173,6 +173,6 @@ main_BB8                        0
 main_BB9                        0
 main_BB10                       0
 main_BB11                       0
-main_BB12                       2
+main_BB12                       7
 main_BB13                       1
 main_BB14                       1

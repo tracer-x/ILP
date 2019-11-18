@@ -1,8 +1,11 @@
 import os
 import csv
+import re
 
-unbounded = "This problem is unbounded"
-infeasible = "This problem is infeasible"
+unbounded = 'This problem is unbounded'
+infeasible = 'This problem is infeasible'
+obj_func = 'Value of objective function: ([0-9]+\..*)'
+# Value of objective function: 233.00000000
 
 def collect(folder):
 	lines = []
@@ -17,7 +20,11 @@ def collect(folder):
 			elif infeasible in data:
 				line.append("infeasible")
 			else:
-				line.append("OK")
+				obj_func_match = re.search(obj_func, data)
+				if obj_func_match:
+					line.append(obj_func_match.group(1)) # Value
+				else:
+					line.append("Invalid Value")
 		lines.append(line)
 	return lines
 

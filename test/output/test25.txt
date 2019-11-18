@@ -1,8 +1,8 @@
 
-Value of objective function: 122.00000000
+Value of objective function: 352.00000000
 
 Actual values of the variables:
-errorCheck_BB0                  2
+errorCheck_BB0                  7
 calculate_outputm1_BB0            0
 calculate_outputm1_BB1            0
 calculate_outputm1_BB2            0
@@ -328,7 +328,7 @@ calculate_outputm21_BB13            0
 calculate_outputm21_BB14            0
 calculate_outputm21_BB15            0
 calculate_outputm21_BB16            0
-calculate_output_BB0            2
+calculate_output_BB0            7
 calculate_output_BB1            0
 calculate_output_BB2            0
 calculate_output_BB3            0
@@ -356,7 +356,7 @@ calculate_output_BB24            0
 calculate_output_BB25            0
 calculate_output_BB26            0
 calculate_output_BB27            0
-calculate_output_BB28            2
+calculate_output_BB28            7
 calculate_output_BB29            0
 calculate_output_BB30            0
 calculate_output_BB31            0
@@ -380,7 +380,7 @@ calculate_output_BB48            0
 calculate_output_BB49            0
 calculate_output_BB50            0
 calculate_output_BB51            0
-calculate_output_BB52            2
+calculate_output_BB52            7
 calculate_output_BB53            0
 calculate_output_BB54            0
 calculate_output_BB55            0
@@ -400,7 +400,7 @@ calculate_output_BB68            0
 calculate_output_BB69            0
 calculate_output_BB70            0
 calculate_output_BB71            0
-calculate_output_BB72            2
+calculate_output_BB72            7
 calculate_output_BB73            0
 calculate_output_BB74            0
 calculate_output_BB75            0
@@ -416,7 +416,7 @@ calculate_output_BB84            0
 calculate_output_BB85            0
 calculate_output_BB86            0
 calculate_output_BB87            0
-calculate_output_BB88            2
+calculate_output_BB88            7
 calculate_output_BB89            0
 calculate_output_BB90            0
 calculate_output_BB91            0
@@ -432,12 +432,12 @@ calculate_output_BB100            0
 calculate_output_BB101            0
 calculate_output_BB102            0
 calculate_output_BB103            0
-calculate_output_BB104            2
+calculate_output_BB104            7
 calculate_output_BB105            0
-calculate_output_BB106            2
+calculate_output_BB106            7
 main_BB0                        1
-main_BB1                        3
-main_BB2                        2
+main_BB1                        8
+main_BB2                        7
 main_BB3                        0
 main_BB4                        0
 main_BB5                        0
@@ -447,6 +447,6 @@ main_BB8                        0
 main_BB9                        0
 main_BB10                       0
 main_BB11                       0
-main_BB12                       2
+main_BB12                       7
 main_BB13                       1
 main_BB14                       1

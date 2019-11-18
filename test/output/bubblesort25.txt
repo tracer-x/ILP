@@ -1,5 +1,5 @@
 
-Value of objective function: 2093.00000000
+Value of objective function: 233.00000000
 
 Actual values of the variables:
 main_BB0                        1
@@ -29,9 +29,9 @@ main_BB23                       0
 main_BB24                       1
 main_BB25                       1
 main_BB26                       0
-main_BB27                     100
-main_BB28                     100
+main_BB27                       7
+main_BB28                       7
 main_BB29                       0
-main_BB30                     100
+main_BB30                       7
 main_BB31                       0
 main_BB32                       1
