@@ -1,5 +1,4 @@
-warning: ignoring debug info with an invalid version (1) in ../test/sumsubset.bc
-max: 10*main_BB0 + 4*main_BB1 + 4*main_BB2 + 5*main_BB3 + 4*main_BB4 + 4*main_BB5 + 5*main_BB6 + 4*main_BB7 + 4*main_BB8 + 5*main_BB9 + 4*main_BB10 + 4*main_BB11 + 5*main_BB12 + 4*main_BB13 + 4*main_BB14 + 5*main_BB15 + 4*main_BB16 + 4*main_BB17 + 5*main_BB18 + 4*main_BB19 + 4*main_BB20 + 5*main_BB21 + 4*main_BB22 + 4*main_BB23 + 5*main_BB24 + 4*main_BB25 + 4*main_BB26 + 5*main_BB27 + 4*main_BB28 + 4*main_BB29 + 1*main_BB30;
+max: 12*main_BB0 + 4*main_BB1 + 4*main_BB2 + 5*main_BB3 + 4*main_BB4 + 4*main_BB5 + 5*main_BB6 + 4*main_BB7 + 4*main_BB8 + 5*main_BB9 + 4*main_BB10 + 4*main_BB11 + 5*main_BB12 + 4*main_BB13 + 4*main_BB14 + 5*main_BB15 + 4*main_BB16 + 4*main_BB17 + 5*main_BB18 + 4*main_BB19 + 4*main_BB20 + 5*main_BB21 + 4*main_BB22 + 4*main_BB23 + 5*main_BB24 + 4*main_BB25 + 4*main_BB26 + 5*main_BB27 + 4*main_BB28 + 4*main_BB29 + 1*main_BB30;
 main_BB0 = 1;
 main_BB0 = main_BB1 + main_BB2;
 main_BB3 = main_BB4 + main_BB5;

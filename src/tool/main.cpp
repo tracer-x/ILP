@@ -15,20 +15,30 @@
 #include <llvm/Support/raw_ostream.h>
 
 #include <graph/Graph.h>
+#include <util/NameUtil.h>
 
 using namespace std;
 using namespace llvm;
 
 cl::opt<string> InputFile(cl::Positional, cl::desc("<bc file>"));
+cl::opt<string> OutputFile(cl::Positional, cl::desc("<output file>"));
 
 int main(int argc, char **argv) {
   cl::ParseCommandLineOptions(argc, argv, "A simple LLVM symbolic simulator");
   // prepare module
   LLVMContext Context;
   SMDiagnostic Err;
+
+  // input & output
   if (InputFile.empty()) {
     InputFile = "../test/test.bc";
   }
+  raw_ostream *out = &errs();
+  if (!OutputFile.empty()) {
+    std::error_code EC;
+    out = new raw_fd_ostream(OutputFile, EC, sys::fs::F_None);
+  }
+
   unique_ptr<Module> mainModule = parseIRFile(InputFile, Err, Context);
 
   // init graphs
@@ -54,24 +64,24 @@ int main(int argc, char **argv) {
       ss << " + ";
     }
   }
-  errs() << ss.str();
+  *out << ss.str();
 
   // constraints
-  errs() << "main_BB0 = 1;\n";
+  *out << "main_BB0 = 1;\n";
   for (unsigned i = 0; i < graphs.size(); ++i) {
-    errs() << graphs[i]->genConsts();
+    *out << graphs[i]->genConsts();
   }
 
   // function call
   for (unsigned i = 0; i < graphs.size(); ++i) {
-    errs() << graphs[i]->genFuncCall();
+    *out << graphs[i]->genFuncCall();
   }
 
   // loop head
   ss.str("");
   for (unsigned i = 0; i < graphs.size(); ++i) {
     shared_ptr<Graph> g = graphs[i];
-    string pre = g->func->getName().str() + "_BB";
+    string pre = NameUtil::getFuncName(g->func) + "_BB";
 
     DominatorTree dt = DominatorTree();
     dt.recalculate(*g->func);
@@ -83,19 +93,19 @@ int main(int argc, char **argv) {
     for (unsigned j = 0; j < g->nodes.size(); ++j) {
       if (loopInfo->isLoopHeader(g->nodes[j]->bb)) {
         //        g->nodes[j]->bb->print(errs());
-        //        errs() << "\n";
+        //        *out << "\n";
         ss << pre << g->nodes[j]->id << " <= 3;\n";
       }
     }
   }
-  errs() << ss.str();
+  *out << ss.str();
 
   // declare
   ss.str("");
   ss << "int ";
   for (unsigned i = 0; i < graphs.size(); ++i) {
     shared_ptr<Graph> g = graphs[i];
-    string pre = g->func->getName().str() + "_BB";
+    string pre = NameUtil::getFuncName(g->func) + "_BB";
     for (unsigned j = 0; j < g->nodes.size(); ++j) {
       ss << pre << g->nodes[j]->id;
       if (j < g->nodes.size() - 1) {
@@ -108,7 +118,10 @@ int main(int argc, char **argv) {
       ss << ", ";
     }
   }
-  errs() << ss.str();
+  *out << ss.str();
 
+  if (out != &errs()) {
+    out->flush();
+  }
   return 0;
 }

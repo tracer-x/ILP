@@ -1,0 +1,29 @@
+
+Value of objective function: 288.00000000
+
+Actual values of the variables:
+main_BB0                        1
+InitSeed_BB0                    1
+Test_BB0                        1
+Sum_BB0                         1
+Sum_BB1                         3
+Sum_BB2                         0
+Sum_BB3                         3
+Sum_BB4                         3
+Sum_BB5                         3
+Sum_BB6                         0
+Sum_BB7                         3
+Sum_BB8                         3
+Sum_BB9                         0
+Sum_BB10                        2
+Sum_BB11                        3
+Initialize_BB0                  3
+Initialize_BB1                  3
+Initialize_BB2                  0
+Initialize_BB3                  3
+Initialize_BB4                  3
+Initialize_BB5                  3
+Initialize_BB6                  0
+Initialize_BB7                  0
+Initialize_BB8                  3
+RandomInteger_BB0               3

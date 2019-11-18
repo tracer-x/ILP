@@ -1,5 +1,4 @@
-warning: ignoring debug info with an invalid version (1) in ../test/test35.bc
-max: 9*display_BB0 + 5*vinToCels_BB0 + 6*vinToCels_BB1 + 3*vinToCels_BB2 + 19*coolantControl_BB0 + 4*coolantControl_BB1 + 18*coolantControl_BB2 + 2*coolantControl_BB3 + 2*coolantControl_BB4 + 4*coolantControl_BB5 + 1*coolantControl_BB6 + 31*main_BB0 + 4*main_BB1 + 9*main_BB2 + 3*main_BB3 + 4*main_BB4 + 4*main_BB5 + 1*main_BB6 + 4*main_BB7 + 3*main_BB8 + 2*main_BB9 + 7*main_BB10 + 3*main_BB11;
+max: 11*display_BB0 + 6*vinToCels_BB0 + 6*vinToCels_BB1 + 3*vinToCels_BB2 + 25*coolantControl_BB0 + 4*coolantControl_BB1 + 18*coolantControl_BB2 + 2*coolantControl_BB3 + 2*coolantControl_BB4 + 4*coolantControl_BB5 + 1*coolantControl_BB6 + 37*main_BB0 + 4*main_BB1 + 9*main_BB2 + 3*main_BB3 + 4*main_BB4 + 4*main_BB5 + 1*main_BB6 + 4*main_BB7 + 3*main_BB8 + 2*main_BB9 + 7*main_BB10 + 3*main_BB11;
 main_BB0 = 1;
 vinToCels_BB0 = vinToCels_BB1 + vinToCels_BB2;
 vinToCels_BB2 = vinToCels_BB0 + vinToCels_BB1;

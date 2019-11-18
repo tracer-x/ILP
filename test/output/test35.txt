@@ -1,0 +1,27 @@
+
+Value of objective function: 170.00000000
+
+Actual values of the variables:
+display_BB0                     0
+vinToCels_BB0                   0
+vinToCels_BB1                   0
+vinToCels_BB2                   0
+coolantControl_BB0              3
+coolantControl_BB1              3
+coolantControl_BB2              0
+coolantControl_BB3              0
+coolantControl_BB4              0
+coolantControl_BB5              0
+coolantControl_BB6              3
+main_BB0                        1
+main_BB1                        3
+main_BB2                        0
+main_BB3                        0
+main_BB4                        0
+main_BB5                        0
+main_BB6                        2
+main_BB7                        0
+main_BB8                        2
+main_BB9                        0
+main_BB10                       2
+main_BB11                       3

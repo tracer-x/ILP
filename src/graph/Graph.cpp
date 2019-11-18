@@ -48,7 +48,7 @@ void Graph::init(Function *f) {
 }
 
 string Graph::genSum() {
-  string prefix = func->getName().str() + "_BB";
+  string prefix = NameUtil::getFuncName(func) + "_BB";
   stringstream ss;
   for (unsigned i = 0; i < nodes.size(); ++i) {
     ss << nodes[i]->bb->size() << "*" << prefix << nodes[i]->id;
@@ -60,7 +60,7 @@ string Graph::genSum() {
 }
 
 string Graph::genConsts() {
-  string prefix = func->getName().str() + "_BB";
+  string prefix = NameUtil::getFuncName(func) + "_BB";
   stringstream ss;
 
   // check children
@@ -114,7 +114,7 @@ string Graph::genFuncCall() {
 }
 
 void Graph::print() {
-  string prefix = func->getName().str() + "_BB";
+  string prefix = NameUtil::getFuncName(func) + "_BB";
   for (unsigned i = 0; i < nodes.size(); ++i) {
     errs() << prefix << nodes[i]->id << ": ";
     for (unsigned j = 0; j < nodes[i]->children.size(); ++j) {

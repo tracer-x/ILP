@@ -11,6 +11,7 @@
 #include <llvm/IR/Instructions.h>
 #include <memory>
 #include <sstream>
+#include <util/NameUtil.h>
 #include <vector>
 
 using namespace std;

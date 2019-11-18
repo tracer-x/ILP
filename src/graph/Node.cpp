@@ -17,14 +17,14 @@ Node::Node(int _id, BasicBlock *_bb) {
 Node::~Node() {}
 
 string Node::genFuncCallConsts() {
-  string prefix = bb->getParent()->getName().str() + "_BB";
+  string prefix = NameUtil::getFuncName(bb->getParent()) + "_BB";
   stringstream ss;
   for (Instruction &i : bb->getInstList()) {
     if (i.getOpcode() == Instruction::Call) {
       Function *f = cast<CallInst>(i).getCalledFunction();
-      if (!f->empty()) {
+      if (f && !f->empty()) {
         ss << prefix << id << " = ";
-        ss << f->getName().str() << "_BB0;\n";
+        ss << NameUtil::getFuncName(f) << "_BB0;\n";
       }
     }
   }
