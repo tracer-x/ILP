@@ -10,9 +10,6 @@ fi
 if [ ! -d "$TEST/ilp" ]; then
 	mkdir $TEST/ilp
 fi
-if [ ! -d "$TEST/output" ]; then
-	mkdir $TEST/output
-fi
 
 # clang compile
 echo "Compiling ..."
@@ -22,18 +19,11 @@ for p in $TEST/input/*.c; do
 	$CLANG -emit-llvm -c -g "$p" -o "$TEST/bc/$name.bc"
 done
 
-# generate ilp
-echo "Creating ilp ..."
+# generate ilp input
+echo "Creating ilp input ..."
 for bc in $TEST/bc/*.bc; do
 	c=$(basename "$bc")
 	name="${c%.*}"
 	# echo $c
 	$PROJECT/build/bin/ilp "$bc" "$TEST/ilp/$name.ilp"
-done
-
-echo "Running ..."
-for p in $TEST/ilp/*.ilp; do
-	c=$(basename "$p")
-	name="${c%.*}"
-	lp_solve "$p" &> "$TEST/output/$name.txt"
 done

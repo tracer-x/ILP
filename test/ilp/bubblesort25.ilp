@@ -22,6 +22,6 @@ main_BB24 = main_BB22 + main_BB23;
 main_BB25 = main_BB24 + main_BB31;
 main_BB27 = main_BB26 + main_BB30;
 main_BB30 = main_BB28 + main_BB29;
-main_BB25 <= 3;
-main_BB27 <= 3;
+main_BB25 <= 7;
+main_BB27 <= 7;
 int main_BB0, main_BB1, main_BB2, main_BB3, main_BB4, main_BB5, main_BB6, main_BB7, main_BB8, main_BB9, main_BB10, main_BB11, main_BB12, main_BB13, main_BB14, main_BB15, main_BB16, main_BB17, main_BB18, main_BB19, main_BB20, main_BB21, main_BB22, main_BB23, main_BB24, main_BB25, main_BB26, main_BB27, main_BB28, main_BB29, main_BB30, main_BB31, main_BB32;
