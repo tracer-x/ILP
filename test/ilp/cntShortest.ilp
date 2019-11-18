@@ -1,0 +1,22 @@
+warning: ignoring debug info with an invalid version (1) in ../test/cntShortest.bc
+max: 5*main_BB0 + 2*InitSeed_BB0 + 5*Test_BB0 + 14*Sum_BB0 + 3*Sum_BB1 + 2*Sum_BB2 + 3*Sum_BB3 + 6*Sum_BB4 + 11*Sum_BB5 + 11*Sum_BB6 + 1*Sum_BB7 + 4*Sum_BB8 + 1*Sum_BB9 + 4*Sum_BB10 + 9*Sum_BB11 + 6*Initialize_BB0 + 3*Initialize_BB1 + 2*Initialize_BB2 + 3*Initialize_BB3 + 6*Initialize_BB4 + 4*Initialize_BB5 + 1*Initialize_BB6 + 4*Initialize_BB7 + 1*Initialize_BB8 + 7*RandomInteger_BB0;
+main_BB0 = 1;
+Sum_BB1 = Sum_BB2 + Sum_BB11;
+Sum_BB3 = Sum_BB4 + Sum_BB9;
+Sum_BB4 = Sum_BB5 + Sum_BB6;
+Sum_BB1 = Sum_BB0 + Sum_BB10;
+Sum_BB3 = Sum_BB2 + Sum_BB8;
+Sum_BB7 = Sum_BB5 + Sum_BB6;
+Initialize_BB1 = Initialize_BB2 + Initialize_BB8;
+Initialize_BB3 = Initialize_BB4 + Initialize_BB6;
+Initialize_BB1 = Initialize_BB0 + Initialize_BB7;
+Initialize_BB3 = Initialize_BB2 + Initialize_BB5;
+main_BB0 = InitSeed_BB0;
+main_BB0 = Test_BB0;
+Test_BB0 = Sum_BB0;
+Initialize_BB4 = RandomInteger_BB0;
+Sum_BB1 <= 3;
+Sum_BB3 <= 3;
+Initialize_BB1 <= 3;
+Initialize_BB3 <= 3;
+int main_BB0, InitSeed_BB0, Test_BB0, Sum_BB0, Sum_BB1, Sum_BB2, Sum_BB3, Sum_BB4, Sum_BB5, Sum_BB6, Sum_BB7, Sum_BB8, Sum_BB9, Sum_BB10, Sum_BB11, Initialize_BB0, Initialize_BB1, Initialize_BB2, Initialize_BB3, Initialize_BB4, Initialize_BB5, Initialize_BB6, Initialize_BB7, Initialize_BB8, RandomInteger_BB0;

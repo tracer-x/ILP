@@ -1,0 +1,74 @@
+test8.c:526:13: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    if ((a2 == 4)) {
+         ~~~^~~~
+test8.c:526:13: note: remove extraneous parentheses around the comparison to silence this warning
+    if ((a2 == 4)) {
+        ~   ^   ~
+test8.c:526:13: note: use '=' to turn this equality comparison into an assignment
+    if ((a2 == 4)) {
+            ^~
+            =
+test8.c:779:13: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    if ((a2 == 4)) {
+         ~~~^~~~
+test8.c:779:13: note: remove extraneous parentheses around the comparison to silence this warning
+    if ((a2 == 4)) {
+        ~   ^   ~
+test8.c:779:13: note: use '=' to turn this equality comparison into an assignment
+    if ((a2 == 4)) {
+            ^~
+            =
+test8.c:798:13: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    if ((a2 == 1)) {
+         ~~~^~~~
+test8.c:798:13: note: remove extraneous parentheses around the comparison to silence this warning
+    if ((a2 == 1)) {
+        ~   ^   ~
+test8.c:798:13: note: use '=' to turn this equality comparison into an assignment
+    if ((a2 == 1)) {
+            ^~
+            =
+test8.c:1528:13: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    if ((a2 == 2)) {
+         ~~~^~~~
+test8.c:1528:13: note: remove extraneous parentheses around the comparison to silence this warning
+    if ((a2 == 2)) {
+        ~   ^   ~
+test8.c:1528:13: note: use '=' to turn this equality comparison into an assignment
+    if ((a2 == 2)) {
+            ^~
+            =
+test8.c:1873:13: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    if ((a2 == 3)) {
+         ~~~^~~~
+test8.c:1873:13: note: remove extraneous parentheses around the comparison to silence this warning
+    if ((a2 == 3)) {
+        ~   ^   ~
+test8.c:1873:13: note: use '=' to turn this equality comparison into an assignment
+    if ((a2 == 3)) {
+            ^~
+            =
+test8.c:2300:13: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    if ((a2 == 1)) {
+         ~~~^~~~
+test8.c:2300:13: note: remove extraneous parentheses around the comparison to silence this warning
+    if ((a2 == 1)) {
+        ~   ^   ~
+test8.c:2300:13: note: use '=' to turn this equality comparison into an assignment
+    if ((a2 == 1)) {
+            ^~
+            =
+test8.c:2362:13: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    if ((a2 == 4)) {
+         ~~~^~~~
+test8.c:2362:13: note: remove extraneous parentheses around the comparison to silence this warning
+    if ((a2 == 4)) {
+        ~   ^   ~
+test8.c:2362:13: note: use '=' to turn this equality comparison into an assignment
+    if ((a2 == 4)) {
+            ^~
+            =
+test8.c:2418:10: warning: implicit declaration of function 'calculate_output2' is invalid in C99 [-Wimplicit-function-declaration]
+  return calculate_output2(input);
+         ^
+8 warnings generated.

@@ -1,0 +1,13 @@
+cdaudio.c:248:45: warning: self-comparison always evaluates to true [-Wtautological-compare]
+                      if (CdAudioPnp_status >= CdAudioPnp_status) {
+                                            ^
+cdaudio.c:249:47: warning: self-comparison always evaluates to true [-Wtautological-compare]
+                        if (CdAudioPnp_status <= CdAudioPnp_status) {
+                                              ^
+cdaudio.c:256:41: warning: self-comparison always evaluates to true [-Wtautological-compare]
+                  if (CdAudioPnp_status >= CdAudioPnp_status) {
+                                        ^
+cdaudio.c:257:43: warning: self-comparison always evaluates to true [-Wtautological-compare]
+                    if (CdAudioPnp_status <= CdAudioPnp_status) {
+                                          ^
+4 warnings generated.

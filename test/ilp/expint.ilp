@@ -1,0 +1,21 @@
+warning: ignoring debug info with an invalid version (1) in ../test/expint.bc
+max: 6*main_BB0 + 23*expint_BB0 + 11*expint_BB1 + 3*expint_BB2 + 35*expint_BB3 + 8*expint_BB4 + 1*expint_BB5 + 4*expint_BB6 + 1*expint_BB7 + 8*expint_BB8 + 3*expint_BB9 + 12*expint_BB10 + 9*expint_BB11 + 3*expint_BB12 + 4*expint_BB13 + 8*expint_BB14 + 4*expint_BB15 + 8*expint_BB16 + 5*expint_BB17 + 4*expint_BB18 + 1*expint_BB19 + 3*expint_BB20 + 2*expint_BB21 + 12*foo_BB0;
+main_BB0 = 1;
+expint_BB0 = expint_BB1 + expint_BB8;
+expint_BB2 = expint_BB3 + expint_BB7;
+expint_BB3 = expint_BB4 + expint_BB5;
+expint_BB9 = expint_BB10 + expint_BB19;
+expint_BB10 = expint_BB11 + expint_BB12;
+expint_BB13 = expint_BB14 + expint_BB16;
+expint_BB2 = expint_BB1 + expint_BB6;
+expint_BB9 = expint_BB8 + expint_BB18;
+expint_BB13 = expint_BB12 + expint_BB15;
+expint_BB17 = expint_BB11 + expint_BB16;
+expint_BB20 = expint_BB7 + expint_BB19;
+expint_BB21 = expint_BB4 + expint_BB20;
+main_BB0 = expint_BB0;
+expint_BB16 = foo_BB0;
+expint_BB2 <= 3;
+expint_BB9 <= 3;
+expint_BB13 <= 3;
+int main_BB0, expint_BB0, expint_BB1, expint_BB2, expint_BB3, expint_BB4, expint_BB5, expint_BB6, expint_BB7, expint_BB8, expint_BB9, expint_BB10, expint_BB11, expint_BB12, expint_BB13, expint_BB14, expint_BB15, expint_BB16, expint_BB17, expint_BB18, expint_BB19, expint_BB20, expint_BB21, foo_BB0;

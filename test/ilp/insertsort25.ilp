@@ -1,0 +1,28 @@
+warning: ignoring debug info with an invalid version (1) in ../test/insertsort25.bc
+max: 20*main_BB0 + 4*main_BB1 + 4*main_BB2 + 3*main_BB3 + 4*main_BB4 + 4*main_BB5 + 3*main_BB6 + 4*main_BB7 + 4*main_BB8 + 3*main_BB9 + 4*main_BB10 + 4*main_BB11 + 3*main_BB12 + 4*main_BB13 + 4*main_BB14 + 3*main_BB15 + 4*main_BB16 + 4*main_BB17 + 3*main_BB18 + 4*main_BB19 + 4*main_BB20 + 3*main_BB21 + 4*main_BB22 + 4*main_BB23 + 2*main_BB24 + 3*main_BB25 + 3*main_BB26 + 3*main_BB27 + 11*main_BB28 + 2*main_BB29 + 24*main_BB30 + 4*main_BB31 + 1*main_BB32;
+main_BB0 = 1;
+main_BB0 = main_BB1 + main_BB2;
+main_BB3 = main_BB4 + main_BB5;
+main_BB6 = main_BB7 + main_BB8;
+main_BB9 = main_BB10 + main_BB11;
+main_BB12 = main_BB13 + main_BB14;
+main_BB15 = main_BB16 + main_BB17;
+main_BB18 = main_BB19 + main_BB20;
+main_BB21 = main_BB22 + main_BB23;
+main_BB25 = main_BB26 + main_BB32;
+main_BB27 = main_BB28 + main_BB29;
+main_BB29 = main_BB30 + main_BB31;
+main_BB3 = main_BB1 + main_BB2;
+main_BB6 = main_BB4 + main_BB5;
+main_BB9 = main_BB7 + main_BB8;
+main_BB12 = main_BB10 + main_BB11;
+main_BB15 = main_BB13 + main_BB14;
+main_BB18 = main_BB16 + main_BB17;
+main_BB21 = main_BB19 + main_BB20;
+main_BB24 = main_BB22 + main_BB23;
+main_BB25 = main_BB24 + main_BB31;
+main_BB27 = main_BB26 + main_BB30;
+main_BB29 = main_BB27 + main_BB28;
+main_BB25 <= 3;
+main_BB27 <= 3;
+int main_BB0, main_BB1, main_BB2, main_BB3, main_BB4, main_BB5, main_BB6, main_BB7, main_BB8, main_BB9, main_BB10, main_BB11, main_BB12, main_BB13, main_BB14, main_BB15, main_BB16, main_BB17, main_BB18, main_BB19, main_BB20, main_BB21, main_BB22, main_BB23, main_BB24, main_BB25, main_BB26, main_BB27, main_BB28, main_BB29, main_BB30, main_BB31, main_BB32;

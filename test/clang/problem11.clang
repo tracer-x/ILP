@@ -1,0 +1,111 @@
+problem11.c:839:13: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    if ((a8 == 17)) {
+         ~~~^~~~~
+problem11.c:839:13: note: remove extraneous parentheses around the comparison to silence this warning
+    if ((a8 == 17)) {
+        ~   ^    ~
+problem11.c:839:13: note: use '=' to turn this equality comparison into an assignment
+    if ((a8 == 17)) {
+            ^~
+            =
+problem11.c:856:13: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    if ((a8 == 16)) {
+         ~~~^~~~~
+problem11.c:856:13: note: remove extraneous parentheses around the comparison to silence this warning
+    if ((a8 == 16)) {
+        ~   ^    ~
+problem11.c:856:13: note: use '=' to turn this equality comparison into an assignment
+    if ((a8 == 16)) {
+            ^~
+            =
+problem11.c:1026:13: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    if ((a3 == 1)) {
+         ~~~^~~~
+problem11.c:1026:13: note: remove extraneous parentheses around the comparison to silence this warning
+    if ((a3 == 1)) {
+        ~   ^   ~
+problem11.c:1026:13: note: use '=' to turn this equality comparison into an assignment
+    if ((a3 == 1)) {
+            ^~
+            =
+problem11.c:1053:13: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    if ((a4 == 1)) {
+         ~~~^~~~
+problem11.c:1053:13: note: remove extraneous parentheses around the comparison to silence this warning
+    if ((a4 == 1)) {
+        ~   ^   ~
+problem11.c:1053:13: note: use '=' to turn this equality comparison into an assignment
+    if ((a4 == 1)) {
+            ^~
+            =
+problem11.c:1247:14: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    if ((a25 == 9)) {
+         ~~~~^~~~
+problem11.c:1247:14: note: remove extraneous parentheses around the comparison to silence this warning
+    if ((a25 == 9)) {
+        ~    ^   ~
+problem11.c:1247:14: note: use '=' to turn this equality comparison into an assignment
+    if ((a25 == 9)) {
+             ^~
+             =
+problem11.c:1313:13: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    if ((a8 == 17)) {
+         ~~~^~~~~
+problem11.c:1313:13: note: remove extraneous parentheses around the comparison to silence this warning
+    if ((a8 == 17)) {
+        ~   ^    ~
+problem11.c:1313:13: note: use '=' to turn this equality comparison into an assignment
+    if ((a8 == 17)) {
+            ^~
+            =
+problem11.c:1398:13: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    if ((a8 == 15)) {
+         ~~~^~~~~
+problem11.c:1398:13: note: remove extraneous parentheses around the comparison to silence this warning
+    if ((a8 == 15)) {
+        ~   ^    ~
+problem11.c:1398:13: note: use '=' to turn this equality comparison into an assignment
+    if ((a8 == 15)) {
+            ^~
+            =
+problem11.c:1504:13: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    if ((a4 == 1)) {
+         ~~~^~~~
+problem11.c:1504:13: note: remove extraneous parentheses around the comparison to silence this warning
+    if ((a4 == 1)) {
+        ~   ^   ~
+problem11.c:1504:13: note: use '=' to turn this equality comparison into an assignment
+    if ((a4 == 1)) {
+            ^~
+            =
+problem11.c:1578:13: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    if ((a8 == 16)) {
+         ~~~^~~~~
+problem11.c:1578:13: note: remove extraneous parentheses around the comparison to silence this warning
+    if ((a8 == 16)) {
+        ~   ^    ~
+problem11.c:1578:13: note: use '=' to turn this equality comparison into an assignment
+    if ((a8 == 16)) {
+            ^~
+            =
+problem11.c:1594:13: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    if ((a3 == 1)) {
+         ~~~^~~~
+problem11.c:1594:13: note: remove extraneous parentheses around the comparison to silence this warning
+    if ((a3 == 1)) {
+        ~   ^   ~
+problem11.c:1594:13: note: use '=' to turn this equality comparison into an assignment
+    if ((a3 == 1)) {
+            ^~
+            =
+problem11.c:1680:13: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    if ((a4 == 1)) {
+         ~~~^~~~
+problem11.c:1680:13: note: remove extraneous parentheses around the comparison to silence this warning
+    if ((a4 == 1)) {
+        ~   ^   ~
+problem11.c:1680:13: note: use '=' to turn this equality comparison into an assignment
+    if ((a4 == 1)) {
+            ^~
+            =
+11 warnings generated.

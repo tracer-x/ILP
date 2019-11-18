@@ -1,0 +1,101 @@
+test10.c:118:14: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    if ((a19 == 1)) {
+         ~~~~^~~~
+test10.c:118:14: note: remove extraneous parentheses around the comparison to silence this warning
+    if ((a19 == 1)) {
+        ~    ^   ~
+test10.c:118:14: note: use '=' to turn this equality comparison into an assignment
+    if ((a19 == 1)) {
+             ^~
+             =
+test10.c:132:14: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    if ((a28 == 10)) {
+         ~~~~^~~~~
+test10.c:132:14: note: remove extraneous parentheses around the comparison to silence this warning
+    if ((a28 == 10)) {
+        ~    ^    ~
+test10.c:132:14: note: use '=' to turn this equality comparison into an assignment
+    if ((a28 == 10)) {
+             ^~
+             =
+test10.c:347:14: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    if ((a11 == 1)) {
+         ~~~~^~~~
+test10.c:347:14: note: remove extraneous parentheses around the comparison to silence this warning
+    if ((a11 == 1)) {
+        ~    ^   ~
+test10.c:347:14: note: use '=' to turn this equality comparison into an assignment
+    if ((a11 == 1)) {
+             ^~
+             =
+test10.c:414:14: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    if ((a25 == 1)) {
+         ~~~~^~~~
+test10.c:414:14: note: remove extraneous parentheses around the comparison to silence this warning
+    if ((a25 == 1)) {
+        ~    ^   ~
+test10.c:414:14: note: use '=' to turn this equality comparison into an assignment
+    if ((a25 == 1)) {
+             ^~
+             =
+test10.c:456:14: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    if ((a19 == 1)) {
+         ~~~~^~~~
+test10.c:456:14: note: remove extraneous parentheses around the comparison to silence this warning
+    if ((a19 == 1)) {
+        ~    ^   ~
+test10.c:456:14: note: use '=' to turn this equality comparison into an assignment
+    if ((a19 == 1)) {
+             ^~
+             =
+test10.c:519:14: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    if ((a11 == 1)) {
+         ~~~~^~~~
+test10.c:519:14: note: remove extraneous parentheses around the comparison to silence this warning
+    if ((a11 == 1)) {
+        ~    ^   ~
+test10.c:519:14: note: use '=' to turn this equality comparison into an assignment
+    if ((a11 == 1)) {
+             ^~
+             =
+test10.c:545:14: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    if ((a25 == 1)) {
+         ~~~~^~~~
+test10.c:545:14: note: remove extraneous parentheses around the comparison to silence this warning
+    if ((a25 == 1)) {
+        ~    ^   ~
+test10.c:545:14: note: use '=' to turn this equality comparison into an assignment
+    if ((a25 == 1)) {
+             ^~
+             =
+test10.c:569:14: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    if ((a11 == 1)) {
+         ~~~~^~~~
+test10.c:569:14: note: remove extraneous parentheses around the comparison to silence this warning
+    if ((a11 == 1)) {
+        ~    ^   ~
+test10.c:569:14: note: use '=' to turn this equality comparison into an assignment
+    if ((a11 == 1)) {
+             ^~
+             =
+test10.c:581:14: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    if ((a17 == 7)) {
+         ~~~~^~~~
+test10.c:581:14: note: remove extraneous parentheses around the comparison to silence this warning
+    if ((a17 == 7)) {
+        ~    ^   ~
+test10.c:581:14: note: use '=' to turn this equality comparison into an assignment
+    if ((a17 == 7)) {
+             ^~
+             =
+test10.c:648:14: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    if ((a25 == 1)) {
+         ~~~~^~~~
+test10.c:648:14: note: remove extraneous parentheses around the comparison to silence this warning
+    if ((a25 == 1)) {
+        ~    ^   ~
+test10.c:648:14: note: use '=' to turn this equality comparison into an assignment
+    if ((a25 == 1)) {
+             ^~
+             =
+10 warnings generated.

@@ -1,0 +1,24 @@
+warning: ignoring debug info with an invalid version (1) in ../test/test37.bc
+max: 9*display_BB0 + 5*vinToCels_BB0 + 6*vinToCels_BB1 + 3*vinToCels_BB2 + 16*coolantControl_BB0 + 4*coolantControl_BB1 + 18*coolantControl_BB2 + 2*coolantControl_BB3 + 4*coolantControl_BB4 + 1*coolantControl_BB5 + 29*main_BB0 + 4*main_BB1 + 9*main_BB2 + 3*main_BB3 + 4*main_BB4 + 4*main_BB5 + 1*main_BB6 + 4*main_BB7 + 4*main_BB8 + 3*main_BB9;
+main_BB0 = 1;
+vinToCels_BB0 = vinToCels_BB1 + vinToCels_BB2;
+vinToCels_BB2 = vinToCels_BB0 + vinToCels_BB1;
+coolantControl_BB1 = coolantControl_BB2 + coolantControl_BB5;
+coolantControl_BB2 = coolantControl_BB3 + coolantControl_BB4;
+coolantControl_BB1 = coolantControl_BB0 + coolantControl_BB4;
+coolantControl_BB4 = coolantControl_BB2 + coolantControl_BB3;
+main_BB1 = main_BB2 + main_BB9;
+main_BB2 = main_BB3 + main_BB7;
+main_BB3 = main_BB4 + main_BB5;
+main_BB1 = main_BB0 + main_BB8;
+main_BB8 = main_BB6 + main_BB7;
+main_BB9 = main_BB1 + main_BB4;
+vinToCels_BB1 = display_BB0;
+coolantControl_BB2 = vinToCels_BB0;
+main_BB4 = display_BB0;
+main_BB5 = display_BB0;
+main_BB7 = display_BB0;
+main_BB9 = coolantControl_BB0;
+coolantControl_BB1 <= 3;
+main_BB1 <= 3;
+int display_BB0, vinToCels_BB0, vinToCels_BB1, vinToCels_BB2, coolantControl_BB0, coolantControl_BB1, coolantControl_BB2, coolantControl_BB3, coolantControl_BB4, coolantControl_BB5, main_BB0, main_BB1, main_BB2, main_BB3, main_BB4, main_BB5, main_BB6, main_BB7, main_BB8, main_BB9;
