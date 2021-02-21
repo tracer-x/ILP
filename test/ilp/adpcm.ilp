@@ -2,8 +2,8 @@ max: 8*my_abs_BB0 + 3*my_abs_BB1 + 4*my_abs_BB2 + 2*my_abs_BB3 + 9*my_fabs_BB0 +
 main_BB0 = 1;
 my_abs_BB0 = my_abs_BB1 + my_abs_BB2;
 my_abs_BB3 = my_abs_BB1 + my_abs_BB2;
-my_fabs_BB0 = my_fabs_BB1 + my_fabs_BB2;
-my_fabs_BB3 = my_fabs_BB1 + my_fabs_BB2;
+my_fabs_BB0 = 0;
+my_fabs_BB3 = 0;
 my_sin_BB1 = my_sin_BB2 + my_sin_BB3;
 my_sin_BB4 = my_sin_BB5 + my_sin_BB6;
 my_sin_BB7 = my_sin_BB8 + my_sin_BB9;
