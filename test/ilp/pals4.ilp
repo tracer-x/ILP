@@ -229,7 +229,12 @@ check_BB5 = check_BB2 + check_BB4;
 check_BB10 = check_BB8 + check_BB9;
 check_BB11 = check_BB6 + check_BB10;
 check_BB13 = check_BB11 + check_BB12;
+
+
+check_BB16 = 0;
 check_BB16 = check_BB14 + check_BB15;
+
+
 ABC_BB0 = ABC_BB2 + ABC_BB1;
 ABC_BB2 = ABC_BB0 + ABC_BB1;
 main_BB1 = main_BB2 + main_BB3;
