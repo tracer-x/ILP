@@ -4,6 +4,9 @@ main_BB0 = 1;
 
 my_abs_BB0 = my_abs_BB1 + my_abs_BB2;
 my_abs_BB3 = my_abs_BB1 + my_abs_BB2;
+
+my_fabs_BB0 = my_fabs_BB1 + my_fabs_BB2;
+my_fabs_BB3 = my_fabs_BB1 + my_fabs_BB2;
 my_fabs_BB0 = 0;
 my_fabs_BB3 = 0;
 
