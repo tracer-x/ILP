@@ -69,6 +69,8 @@ init_BB44 = init_BB42 + init_BB43;
 init_BB46 = init_BB44 + init_BB45;
 init_BB48 = init_BB46 + init_BB47;
 check_BB0 = check_BB1 + check_BB15;
+
+
 check_BB1 = check_BB2 + check_BB3;
 check_BB3 = check_BB4 + check_BB12;
 check_BB5 = check_BB6 + check_BB7;
@@ -78,6 +80,17 @@ check_BB10 = check_BB8 + check_BB9;
 check_BB11 = check_BB6 + check_BB10;
 check_BB13 = check_BB11 + check_BB12;
 check_BB16 = check_BB14 + check_BB15;
+check_BB1 = 0;
+check_BB3 = 0;
+check_BB5 = 0;
+check_BB7 = 0;
+check_BB5 = 0;
+check_BB10 = 0;
+check_BB11 = 0;
+check_BB13 = 0;
+check_BB16 = 0;
+
+
 ABC_BB0 = ABC_BB2 + ABC_BB1;
 ABC_BB2 = ABC_BB0 + ABC_BB1;
 main_BB1 = main_BB2 + main_BB3;

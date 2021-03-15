@@ -1,9 +1,16 @@
 max: 8*my_abs_BB0 + 3*my_abs_BB1 + 4*my_abs_BB2 + 2*my_abs_BB3 + 9*my_fabs_BB0 + 3*my_fabs_BB1 + 4*my_fabs_BB2 + 2*my_fabs_BB3 + 13*my_sin_BB0 + 3*my_sin_BB1 + 4*my_sin_BB2 + 1*my_sin_BB3 + 3*my_sin_BB4 + 4*my_sin_BB5 + 28*my_sin_BB6 + 3*my_sin_BB7 + 25*my_sin_BB8 + 2*my_sin_BB9 + 7*my_cos_BB0 + 48*encode_BB0 + 3*encode_BB1 + 29*encode_BB2 + 4*encode_BB3 + 31*encode_BB4 + 3*encode_BB5 + 9*encode_BB6 + 4*encode_BB7 + 105*encode_BB8 + 2*encode_BB9 + 2*encode_BB10 + 11*encode_BB11 + 4*encode_BB12 + 51*encode_BB13 + 24*filtez_BB0 + 3*filtez_BB1 + 15*filtez_BB2 + 4*filtez_BB3 + 4*filtez_BB4 + 40*filtep_BB0 + 20*quantl_BB0 + 3*quantl_BB1 + 11*quantl_BB2 + 1*quantl_BB3 + 1*quantl_BB4 + 4*quantl_BB5 + 3*quantl_BB6 + 3*quantl_BB7 + 3*quantl_BB8 + 2*quantl_BB9 + 21*logscl_BB0 + 2*logscl_BB1 + 3*logscl_BB2 + 2*logscl_BB3 + 2*logscl_BB4 + 29*scalel_BB0 + 18*upzero_BB0 + 2*upzero_BB1 + 3*upzero_BB2 + 11*upzero_BB3 + 4*upzero_BB4 + 1*upzero_BB5 + 2*upzero_BB6 + 3*upzero_BB7 + 9*upzero_BB8 + 2*upzero_BB9 + 2*upzero_BB10 + 15*upzero_BB11 + 4*upzero_BB12 + 1*upzero_BB13 + 29*upzero_BB14 + 32*uppol2_BB0 + 4*uppol2_BB1 + 10*uppol2_BB2 + 4*uppol2_BB3 + 4*uppol2_BB4 + 11*uppol2_BB5 + 2*uppol2_BB6 + 3*uppol2_BB7 + 2*uppol2_BB8 + 2*uppol2_BB9 + 30*uppol1_BB0 + 5*uppol1_BB1 + 5*uppol1_BB2 + 7*uppol1_BB3 + 3*uppol1_BB4 + 5*uppol1_BB5 + 4*uppol1_BB6 + 2*uppol1_BB7 + 21*logsch_BB0 + 2*logsch_BB1 + 3*logsch_BB2 + 2*logsch_BB3 + 2*logsch_BB4 + 187*decode_BB0 + 3*decode_BB1 + 29*decode_BB2 + 4*decode_BB3 + 40*decode_BB4 + 3*decode_BB5 + 17*decode_BB6 + 4*decode_BB7 + 7*decode_BB8 + 40*reset_BB0 + 3*reset_BB1 + 25*reset_BB2 + 4*reset_BB3 + 3*reset_BB4 + 3*reset_BB5 + 25*reset_BB6 + 4*reset_BB7 + 2*reset_BB8 + 3*reset_BB9 + 24*reset_BB10 + 4*reset_BB11 + 3*reset_BB12 + 3*reset_BB13 + 23*reset_BB14 + 4*reset_BB15 + 1*reset_BB16 + 13*main_BB0 + 3*main_BB1 + 25*main_BB2 + 4*main_BB3 + 2*main_BB4 + 3*main_BB5 + 5*main_BB6 + 4*main_BB7 + 2*main_BB8 + 3*main_BB9 + 7*main_BB10 + 4*main_BB11 + 11*main_BB12;
 main_BB0 = 1;
+
+
 my_abs_BB0 = my_abs_BB1 + my_abs_BB2;
 my_abs_BB3 = my_abs_BB1 + my_abs_BB2;
+
 my_fabs_BB0 = my_fabs_BB1 + my_fabs_BB2;
 my_fabs_BB3 = my_fabs_BB1 + my_fabs_BB2;
+my_fabs_BB0 = 0;
+my_fabs_BB3 = 0;
+
+
 my_sin_BB1 = my_sin_BB2 + my_sin_BB3;
 my_sin_BB4 = my_sin_BB5 + my_sin_BB6;
 my_sin_BB7 = my_sin_BB8 + my_sin_BB9;
