@@ -138,6 +138,11 @@ calculate_output_BB160 = calculate_output_BB161 + calculate_output_BB165;
 calculate_output_BB161 = calculate_output_BB162 + calculate_output_BB165;
 calculate_output_BB162 = calculate_output_BB163 + calculate_output_BB165;
 calculate_output_BB163 = calculate_output_BB164 + calculate_output_BB165;
+
+
+calculate_output2_BB164 = 0;
+calculate_output2_BB165  = 0;
+
 calculate_output_BB165 = calculate_output_BB166 + calculate_output_BB172;
 calculate_output_BB166 = calculate_output_BB167 + calculate_output_BB172;
 calculate_output_BB167 = calculate_output_BB168 + calculate_output_BB172;
