@@ -174,6 +174,28 @@ init_BB129 = init_BB127 + init_BB128;
 init_BB131 = init_BB129 + init_BB130;
 init_BB133 = init_BB131 + init_BB132;
 init_BB135 = init_BB133 + init_BB134;
+
+
+
+
+check_BB25 = 0 ;
+check_BB26 = 0 ;
+check_BB27 = 0 ;
+check_BB28 = 0 ;
+check_BB29 = 0 ;
+check_BB30 = 0 ;
+check_BB31 = 0 ;
+check_BB32 = 0 ;
+check_BB33 = 0 ;
+check_BB34 = 0 ;
+check_BB35 = 0 ;
+check_BB36 = 0 ;
+check_BB37 = 0 ;
+check_BB38 = 0 ;
+check_BB39 = 0 ;
+
+
+
 check_BB0 = check_BB1 + check_BB38;
 check_BB1 = check_BB2 + check_BB36;
 check_BB2 = check_BB3 + check_BB34;

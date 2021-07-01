@@ -4,6 +4,13 @@ method1_BB0 = method1_BB1 + method1_BB5;
 method1_BB1 = method1_BB2 + method1_BB3;
 method1_BB6 = method1_BB7 + method1_BB11;
 method1_BB7 = method1_BB8 + method1_BB9;
+
+
+
+is_method1_triggered_BB11 = 0;
+is_method1_triggered_BB12  = 0;
+
+
 method1_BB12 = method1_BB13 + method1_BB14;
 method1_BB14 = method1_BB15 + method1_BB16;
 method1_BB18 = method1_BB19 + method1_BB23;
